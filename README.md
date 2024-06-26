@@ -28,6 +28,7 @@ sudo mysql -u root -p
 ```
 ```sql
 show databases;
+use springbackend; 
 show tables;
 select * from tbl_workers;
 ```
