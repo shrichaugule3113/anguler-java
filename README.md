@@ -35,15 +35,9 @@ select * from tbl_workers;
 ##### Dockerfile for Creating Mariadb server 
 
 FROM mariadb:latest
-
-# Set environment variables for the MariaDB root user password and database name
 ENV MARIADB_ROOT_PASSWORD=Admin123
 ENV MARIADB_DATABASE=springbackend
 ENV MARIADB_USER=admin
 ENV MARIADB_PASSWORD=admin
-
-# Expose the default MariaDB port
 EXPOSE 3306
-
-# Copy the initialization SQL script to the Docker image
 COPY ./springbackend.sql /docker-entrypoint-initdb.d/
