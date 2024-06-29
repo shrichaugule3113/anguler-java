@@ -33,7 +33,7 @@ select * from tbl_workers;
 ```
 
 ##### Dockerfile for Creating Mariadb server 
-
+```bash
 FROM mariadb:latest
 ENV MARIADB_ROOT_PASSWORD=Admin123
 ENV MARIADB_DATABASE=springbackend
@@ -41,3 +41,4 @@ ENV MARIADB_USER=admin
 ENV MARIADB_PASSWORD=admin
 EXPOSE 3306
 COPY ./springbackend.sql /docker-entrypoint-initdb.d/
+```
